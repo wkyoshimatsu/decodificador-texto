@@ -1,4 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #E5E5E5;
+    font-family: "Inter", sans-serif;
 }
-  
+
+.apresentacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apresentacao__principal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apresentacao__principal__entrada{
+    display: flex;
+    flex-direction: column;
+}
+
+.apresentacao__principal__entrada__observacao {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.apresentacao__principal__entrada__observacao__iconeAtencao {
+    background-color: #65747D;
+    color: #FFFFFF;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.apresentacao__principal__entrada__observacao__texto {
+    color: #495057;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.apresentacao__principal__saida {
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.apresentacao__principal__saida__titulo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.apresentacao__principal__saida__descricao {
+    font-size: 16px;
+    font-weight: 400;
+}

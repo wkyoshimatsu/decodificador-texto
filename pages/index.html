@@ -2,17 +2,34 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Decodificador de texto</title>
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <div id="header"></div>
-  
-  <main>
-    <h1>Bem-vindo à Página Inicial</h1>
-  </main>
-  
+  <div class="apresentacao">
+    <div id="header"></div>
+    <main class="apresentacao__principal">
+      <section class="apresentacao__principal__entrada">
+        <p>Digite seu texto</p>
+        <div class="apresentacao__principal__entrada__observacao">
+          <p class="apresentacao__principal__entrada__observacao__iconeAtencao">!</p>
+          <p class="apresentacao__principal__entrada__observacao__texto">Apenas letras minúsculas e sem acento.</p>
+        </div>
+        <div>
+          <button>Criptografar</button>
+          <button>Descriptografar</button>
+        </div>
+        
+      </section>
+      <section class="apresentacao__principal__saida">
+        <img src="/assets/images/nenhumaMensagemEncontrada.jpg" alt="Pessoa ajoelhada com lupa na mão investigando um diamante">
+        <p class="apresentacao__principal__saida__titulo">Nenhuma mensagem encontrada</p>
+        <p class="apresentacao__principal__saida__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </section>
+    </main>
+  </div>
   <div id="footer"></div>
   
   <script src="/assets/js/script.js"></script>
