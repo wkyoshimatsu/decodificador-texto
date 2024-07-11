@@ -22,21 +22,47 @@
 body {
     height: 100vh;
     box-sizing: border-box;
-    background-color: var(--cor-secundaria);
+    background-color: #F3F5FC;
     font-family: "Inter", sans-serif;
 }
 
 .apresentacao {
+    padding: 40px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
-.header__menu {
-    width: 80px;
+.cabecalho__menu {
+    width: 120px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /*justify-content: center*/;
-    
+    gap: 40px;    
+}
+
+.cabecalho__menu__logo {
+    display: flex;
+    justify-content: center;
+}
+
+/*.cabecalho__menu__logo__imagem {
+
+}*/
+
+.cabecalho__menu__opcao {
+    height: 176px;
+    background-color: #F6F7FD;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho__menu__opcao__seletor {
+    width: 72px;
+    height: 128px;
+    background-color: #FFFFFF;
+    border-radius: 36px;
 }
 
 .apresentacao__principal {
