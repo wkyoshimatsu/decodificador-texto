@@ -5,14 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('/components/header.html')
       .then(response => response.text())
       .then(data => {
-        document.getElementById('header').innerHTML = data;
+        document.getElementById('cabecalho').innerHTML = data;
       });
   
     fetch('/components/footer.html')
       .then(response => response.text())
       .then(data => {
-        document.getElementById('footer').innerHTML = data;
+        document.getElementById('rodape').innerHTML = data;
       });
+
+    fetch('/components/nenhumaMensagemEncontrada.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('apresentacao__saida__conteudo').innerHTML = data;
+    });
 });
   
   
