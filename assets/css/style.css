@@ -26,12 +26,14 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+/*apresentacao*/
 .apresentacao {
     padding: 40px;
     display: flex;
     justify-content: space-between;
 }
 
+/* cabecalho */
 .cabecalho__menu {
     width: 120px;
     box-sizing: border-box;
@@ -65,18 +67,23 @@ body {
     border-radius: 36px;
 }
 
-.apresentacao__entrada{
+/* entrada */
+.entrada{
     display: flex;
     flex-direction: column;
 }
 
-.apresentacao__entrada__observacao {
+.entrada__campo {
+    
+}
+
+.entrada__observacao {
     display: flex;
     justify-content: left;
     align-content: center;
 }
 
-.apresentacao__entrada__observacao__iconeAtencao {
+.entrada__observacao__iconeAtencao {
     background-color: #65747D;
     color: white;
     width: 16px;
@@ -85,13 +92,14 @@ body {
     text-align: center;
 }
 
-.apresentacao__entrada__observacao__texto {
+.entrada__observacao__texto {
     color: var(--cor-fonte-secundaria);
     font-size: 0.75rem;
     font-weight: 400;
 }
 
-.apresentacao__saida {
+/* saida */
+.saida {
     width: 400px;
     height: 944px;
     background-color: white;
@@ -102,15 +110,14 @@ body {
     justify-content: center;
 }
 
-.apresentacao__pntrada__conteudo
-
-.apresentacao__saida__titulo {
+/* nenhumaMensagemEncontrada */
+.nenhumaMensagemEncontrada__titulo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--cor-fonte-terciaria);
 }
 
-.apresentacao__saida__descricao {
+.nenhumaMensagemEncontrada__descricao {
     font-size: 1rem;
     font-weight: 400;
     color: var(--cor-fonte-secundaria);

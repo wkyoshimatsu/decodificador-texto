@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch('/components/nenhumaMensagemEncontrada.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('apresentacao__saida__conteudo').innerHTML = data;
+      document.getElementById('saida__conteudo').innerHTML = data;
     });
   
     fetch('/components/footer.html')
