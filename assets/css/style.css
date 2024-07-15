@@ -65,28 +65,18 @@ body {
     border-radius: 36px;
 }
 
-.apresentacao__principal {
-    display: flex;
-    justify-content: space-between;
-}
-
-.apresentacao__principal__entrada{
+.apresentacao__entrada{
     display: flex;
     flex-direction: column;
 }
 
-.apresentacao__principal__entrada__conteudo {
-    color: var(--cor-fonte-primaria);
-    font-size: 1.5rem;
-}
-
-.apresentacao__principal__entrada__observacao {
+.apresentacao__entrada__observacao {
     display: flex;
     justify-content: left;
     align-content: center;
 }
 
-.apresentacao__principal__entrada__observacao__iconeAtencao {
+.apresentacao__entrada__observacao__iconeAtencao {
     background-color: #65747D;
     color: white;
     width: 16px;
@@ -95,13 +85,15 @@ body {
     text-align: center;
 }
 
-.apresentacao__principal__entrada__observacao__texto {
+.apresentacao__entrada__observacao__texto {
     color: var(--cor-fonte-secundaria);
     font-size: 0.75rem;
     font-weight: 400;
 }
 
-.apresentacao__principal__saida {
+.apresentacao__saida {
+    width: 400px;
+    height: 944px;
     background-color: white;
     border-radius: 32px;
     display: flex;
@@ -110,13 +102,15 @@ body {
     justify-content: center;
 }
 
-.apresentacao__principal__saida__titulo {
+.apresentacao__pntrada__conteudo
+
+.apresentacao__saida__titulo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--cor-fonte-terciaria);
 }
 
-.apresentacao__principal__saida__descricao {
+.apresentacao__saida__descricao {
     font-size: 1rem;
     font-weight: 400;
     color: var(--cor-fonte-secundaria);
