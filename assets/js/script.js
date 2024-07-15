@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('saida').innerHTML = data;
       });
 
-      fetch('/components/nenhumaMensagemEncontrada.html')
+      fetch('/components/saidaCriptografada.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('saida__conteudo').innerHTML = data;
