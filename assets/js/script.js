@@ -42,7 +42,12 @@ function criptografar () {
   A letra "u" é convertida para "ufat"
   */
   let textoBase = document.querySelector("textarea").value;
-  console.log(textoBase);
+  let textoEmProcessamento = textoBase.replaceAll("e", "enter");
+  textoEmProcessamento = textoEmProcessamento.replaceAll("i", "imes");
+  textoEmProcessamento = textoEmProcessamento.replaceAll("a", "ai");
+  textoEmProcessamento = textoEmProcessamento.replaceAll("o", "ober");
+  let textoCriptografado = textoEmProcessamento.replaceAll("u", "ufat");
+  console.log(textoCriptografado);
 }
   
   
