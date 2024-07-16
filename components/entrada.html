@@ -1,12 +1,12 @@
-<form class="entrada" action="">
-    <textarea class="entrada__campo" rows="13" cols="40">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</textarea>
+<form id="entrada" class="entrada" action="">
+    <textarea id="entrada" class="entrada__campo" rows="13" cols="40" placeholder="Digite seu texto" required></textarea>
 
     <div class="entrada__observacao">
     <p class="entrada__observacao__iconeAtencao">!</p>
     <p class="entrada__observacao__texto">Apenas letras minúsculas e sem acento.</p>
     </div>
     <div class="entrada__botoes">
-    <button onclick="criptografar()" class="entrada__botoes__criptografar" type="submit" value="Criptografar">Criptografar</button>
-    <button class="entrada__botoes__descriptografar" type="submit" value="Descriptografar">Descriptografar</button>
+    <input onclick="criptografar()" class="entrada__botoes__criptografar" type="submit" value="Criptografar"></button>
+    <input class="entrada__botoes__descriptografar" type="submit" value="Descriptografar"></button>
     </div>
 </form>
