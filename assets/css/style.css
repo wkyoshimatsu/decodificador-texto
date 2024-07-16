@@ -43,12 +43,14 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 40px;    
 }
 
 .apresentacao__cabecalho__menu__logo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /*.apresentacao__cabecalho__menu__logo__imagem {
@@ -68,12 +70,69 @@ body {
     height: 128px;
     background-color: #FFFFFF;
     border-radius: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.apresentacao__cabecalho__menu__opcao__seletor__texto {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    border: 0px;
+    background-color: #0A3871;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.apresentacao__cabecalho__menu__opcao__seletor__acessibilidade {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #0A3871;
+    font-weight: 400;
+    border: 0px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.apresentacao__cabecalho__menu__opcao__seletor__portugues {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    border: 0px;
+    background-color: #0A3871;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.apresentacao__cabecalho__menu__opcao__seletor__espanhol {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: #0A3871;
+    font-weight: 400;
+    border: 0px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
 }
 
 /* entrada */
 .apresentacao__entrada{
     width: 680px;
-    padding: 128px 0 0 0;
+    padding: 128px 0 32px 0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -82,7 +141,7 @@ body {
 }
 
 .apresentacao__entrada__campo {
-    height: 667px;
+    height: 666px;
     font-family: "Inter", sans-serif;
     font-size: 2rem;
     color: #0A3871;
@@ -96,19 +155,22 @@ body {
     display: flex;
     justify-content: left;
     align-content: center;
+    gap: 8px;
 }
 
 .apresentacao__entrada__observacao__iconeAtencao {
     background-color: #65747D;
     color: #FFFFFF;
+    font-size: 0.75rem;
     width: 16px;
     height: 16px;
     border-radius: 8px;
     text-align: center;
+    align-content: center;
 }
 
 .apresentacao__entrada__observacao__texto {
-    color: var(--cor-fonte-secundaria);
+    color: #495057;
     font-size: 0.75rem;
     font-weight: 400;
 }
@@ -155,7 +217,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    box-sizing: border-box;
 }
 
 /* nenhumaMensagemEncontrada */
@@ -197,7 +259,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 32px;
 }
 
@@ -226,12 +288,7 @@ body {
 
 /* rodape */
 .rodape {
-    font-size: 1rem;
-    color: #FFFFFF;
-    font-weight: 400;
     background-color: #0A3871;
-    padding: 16px;
-    text-align: center;
 }
 
 .rodape__conteudo {

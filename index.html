@@ -15,10 +15,16 @@
           <img class="apresentacao__cabecalho__menu__logo__imagem" src="/assets/images/logo.png" alt="Logo da Alura">
         </div>
         <div class="apresentacao__cabecalho__menu__opcao">
-          <div class="apresentacao__cabecalho__menu__opcao__seletor"></div>
+          <div class="apresentacao__cabecalho__menu__opcao__seletor">
+            <button class="apresentacao__cabecalho__menu__opcao__seletor__texto" value="TT">TT</button>
+            <button class="apresentacao__cabecalho__menu__opcao__seletor__acessibilidade" value="AC">AC</button>
+          </div>
         </div>
         <div class="apresentacao__cabecalho__menu__opcao">
-          <div class="apresentacao__cabecalho__menu__opcao__seletor"></div>
+          <div class="apresentacao__cabecalho__menu__opcao__seletor">
+            <button class="apresentacao__cabecalho__menu__opcao__seletor__portugues" value="PT">PT</button>
+            <button class="apresentacao__cabecalho__menu__opcao__seletor__espanhol" value="ES">ES</button>
+          </div>
         </div>
       </nav>
     </header>
@@ -29,21 +35,21 @@
         <p class="apresentacao__entrada__observacao__texto">Apenas letras minúsculas e sem acento.</p>
       </div>
       <div class="apresentacao__entrada__botoes">
-        <input onclick="criptografar()" class="apresentacao__entrada__botoes__criptografar" value="Criptografar"></input>
-        <input class="apresentacao__entrada__botoes__descriptografar"  value="Descriptografar"></input>
+        <button onclick="criptografar()" class="apresentacao__entrada__botoes__criptografar" value="Criptografar">Criptografar</button>
+        <button class="apresentacao__entrada__botoes__descriptografar"  value="Descriptografar">Descriptografar</button>
       </div>
     </form>
     <section class="apresentacao__saida" >
-      <section class="apresentacao__saida__nenhumaMensagemEncontrada" >
+      <section class="apresentacao__saida__nenhumaMensagemEncontrada" style="display: none">
         <img src="/assets/images/nenhumaMensagemEncontrada.jpg" alt="Pessoa ajoelhada com lupa na mão investigando um diamante">
         <div class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo">
             <p class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo">Nenhuma mensagem encontrada</p>
             <p class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
         </div>
       </section>
-      <section class="apresentacao__saida__Criptografado" style="display: none">
+      <section class="apresentacao__saida__Criptografado" >
         <p class="apresentacao__saida__Criptografado__conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
-        <input class="apresentacao__saida__Criptografado__botaoCopiar" value="Copiar"></input>
+        <button class="apresentacao__saida__Criptografado__botaoCopiar" value="Copiar">Copiar</button>
       </section>
     </section>
   </main>   
