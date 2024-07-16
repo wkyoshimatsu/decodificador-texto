@@ -9,12 +9,48 @@
 </head>
 <body>
   <main class="apresentacao">
-    <section id="cabecalho"></section>
-    <section id="entrada"></section>
-    <section id="saida"></section>
+    <header class="apresentacao__cabecalho">
+      <nav class="apresentacao__cabecalho__menu">
+        <div class="apresentacao__cabecalho__menu__logo">
+          <img class="apresentacao__cabecalho__menu__logo__imagem" src="/assets/images/logo.png" alt="Logo da Alura">
+        </div>
+        <div class="apresentacao__cabecalho__menu__opcao">
+          <div class="apresentacao__cabecalho__menu__opcao__seletor"></div>
+        </div>
+        <div class="apresentacao__cabecalho__menu__opcao">
+          <div class="apresentacao__cabecalho__menu__opcao__seletor"></div>
+        </div>
+      </nav>
+    </header>
+    <form id="entrada" class="apresentacao__entrada" action="">
+      <textarea id="entrada" class="apresentacao__entrada__campo" rows="13" cols="40" placeholder="Digite seu texto" required></textarea>
+      <div class="apresentacao__entrada__observacao">
+        <p class="apresentacao__entrada__observacao__iconeAtencao">!</p>
+        <p class="apresentacao__entrada__observacao__texto">Apenas letras minúsculas e sem acento.</p>
+      </div>
+      <div class="apresentacao__entrada__botoes">
+        <input onclick="criptografar()" class="apresentacao__entrada__botoes__criptografar" value="Criptografar"></input>
+        <input class="apresentacao__entrada__botoes__descriptografar"  value="Descriptografar"></input>
+      </div>
+    </form>
+    <section class="apresentacao__saida" >
+      <section class="apresentacao__saida__nenhumaMensagemEncontrada" >
+        <img src="/assets/images/nenhumaMensagemEncontrada.jpg" alt="Pessoa ajoelhada com lupa na mão investigando um diamante">
+        <div class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo">
+            <p class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo">Nenhuma mensagem encontrada</p>
+            <p class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+      </section>
+      <section class="apresentacao__saida__Criptografado" style="display: none">
+        <p class="apresentacao__saida__Criptografado__conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
+        <input class="apresentacao__saida__Criptografado__botaoCopiar" value="Copiar"></input>
+      </section>
+    </section>
   </main>   
   </div>
-  <div id="rodape"></div>
+  <footer class="rodape">
+    <p class="rodape__conteudo">&copy; 2024 Washington Kiyoshi Yoshimatsu</p>
+  </footer>
   <script src="/assets/js/script.js"></script>
 </body>
 </html>

@@ -35,7 +35,10 @@ body {
 }
 
 /* cabecalho */
-.menu {
+/* .apresentacao__cabecalho {
+} */
+
+.apresentacao__cabecalho__menu {
     width: 120px;
     box-sizing: border-box;
     display: flex;
@@ -43,16 +46,15 @@ body {
     gap: 40px;    
 }
 
-.menu__logo {
+.apresentacao__cabecalho__menu__logo {
     display: flex;
     justify-content: center;
 }
 
-/*.menu__logo__imagem {
-
+/*.apresentacao__cabecalho__menu__logo__imagem {
 }*/
 
-.menu__opcao {
+.apresentacao__cabecalho__menu__opcao {
     height: 176px;
     background-color: #F6F7FD;
     border-radius: 60px;
@@ -61,7 +63,7 @@ body {
     align-items: center;
 }
 
-.menu__opcao__seletor {
+.apresentacao__cabecalho__menu__opcao__seletor {
     width: 72px;
     height: 128px;
     background-color: #FFFFFF;
@@ -69,7 +71,7 @@ body {
 }
 
 /* entrada */
-.entrada{
+.apresentacao__entrada{
     width: 680px;
     padding: 128px 0 0 0;
     display: flex;
@@ -79,7 +81,7 @@ body {
     gap: 16px;
 }
 
-.entrada__campo {
+.apresentacao__entrada__campo {
     height: 667px;
     font-family: "Inter", sans-serif;
     font-size: 2rem;
@@ -90,13 +92,13 @@ body {
     resize: none;
 }
 
-.entrada__observacao {
+.apresentacao__entrada__observacao {
     display: flex;
     justify-content: left;
     align-content: center;
 }
 
-.entrada__observacao__iconeAtencao {
+.apresentacao__entrada__observacao__iconeAtencao {
     background-color: #65747D;
     color: #FFFFFF;
     width: 16px;
@@ -105,19 +107,19 @@ body {
     text-align: center;
 }
 
-.entrada__observacao__texto {
+.apresentacao__entrada__observacao__texto {
     color: var(--cor-fonte-secundaria);
     font-size: 0.75rem;
     font-weight: 400;
 }
 
-.entrada__botoes {
+.apresentacao__entrada__botoes {
     display: flex;
     justify-content: space-between;
     gap: 24px;
 }
 
-.entrada__botoes__criptografar {
+.apresentacao__entrada__botoes__criptografar {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     color: #FFFFFF;
@@ -127,9 +129,10 @@ body {
     border-radius: 24px;
     width: 328px;
     padding: 24px;
+    text-align: center;
 }
 
-.entrada__botoes__descriptografar {
+.apresentacao__entrada__botoes__descriptografar {
     width: 328px;
     padding: 24px;
     font-family: "Inter", sans-serif;
@@ -139,10 +142,11 @@ body {
     border: 1px solid;
     background-color: #D8DFE8;
     border-radius: 24px;
+    text-align: center;
 }
 
 /* saida */
-.saida {
+.apresentacao__saida {
     width: 400px;
     height: 944px;
     background-color: #FFFFFF;
@@ -155,7 +159,7 @@ body {
 }
 
 /* nenhumaMensagemEncontrada */
-.nenhumaMensagemEncontrada {
+.apresentacao__saida__nenhumaMensagemEncontrada {
     width: 336px;
     display: flex;
     flex-direction: column;
@@ -164,7 +168,7 @@ body {
     gap: 32px;
 }
 
-.nenhumaMensagemEncontrada__conteudo {
+.apresentacao__saida__nenhumaMensagemEncontrada__conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,14 +176,14 @@ body {
     gap: 16px;
 }
 
-.nenhumaMensagemEncontrada__conteudo__titulo {
+.apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo {
     font-size: 1.5rem;
     font-weight: 700;
     color: #343A40;
     text-align: center;
 }
 
-.nenhumaMensagemEncontrada__conteudo__descricao {
+.apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao {
     font-size: 1rem;
     font-weight: 400;
     color: #495057;
@@ -187,7 +191,7 @@ body {
 }
 
 /* saidaCriptografada */
-.saidaCriptografada {
+.apresentacao__saida__Criptografado {
     width: 336px;
     background-color: #FFFFFF;
     display: flex;
@@ -197,7 +201,7 @@ body {
     gap: 32px;
 }
 
-.saidaCriptografada__conteudo {
+.apresentacao__saida__Criptografado__conteudo {
     height: 781px;
     font-family: "Inter", sans-serif;
     font-size: 1.5rem;
@@ -205,7 +209,7 @@ body {
     font-weight: 400;
 }
 
-.saidaCriptografada__botaoCopiar {
+.apresentacao__saida__Criptografado__botaoCopiar {
     width: 336px;
     padding: 24px;
     border: 1px solid;
@@ -216,11 +220,21 @@ body {
     font-size: 1rem;
     color: #0A3871;
     font-weight: 400;
+    text-align: center;
 }
 
 
 /* rodape */
 .rodape {
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    background-color: #0A3871;
+    padding: 16px;
+    text-align: center;
+}
+
+.rodape__conteudo {
     font-size: 1rem;
     color: #FFFFFF;
     font-weight: 400;
