@@ -117,7 +117,7 @@ body {
     gap: 24px;
 }
 
-.entrada__botoes__escuro {
+.entrada__botoes__criptografar {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     color: #FFFFFF;
@@ -129,7 +129,7 @@ body {
     padding: 24px;
 }
 
-.entrada__botoes__claro {
+.entrada__botoes__descriptografar {
     width: 328px;
     padding: 24px;
     font-family: "Inter", sans-serif;
