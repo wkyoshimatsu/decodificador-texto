@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Decodificador de texto</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <main class="apresentacao">
@@ -39,17 +39,17 @@
         <button class="apresentacao__entrada__botoes__descriptografar"  value="Descriptografar">Descriptografar</button>
       </div>
     </form>
-    <section class="apresentacao__saida" >
-      <section class="apresentacao__saida__nenhumaMensagemEncontrada" style="display: none">
-        <img src="/assets/images/nenhumaMensagemEncontrada.jpg" alt="Pessoa ajoelhada com lupa na mão investigando um diamante">
-        <div class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo">
-            <p class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo">Nenhuma mensagem encontrada</p>
-            <p class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+    <section class="apresentacao__saida">
+      <section id="apresentacao__saida__nenhumaMensagemEncontrada" class="apresentacao__saida__nenhumaMensagemEncontrada">
+        <img id="apresentacao__saida__nenhumaMensagemEncontrada__imagem" class="apresentacao__saida__nenhumaMensagemEncontrada__imagem" src="/assets/images/nenhumaMensagemEncontrada.jpg" alt="Pessoa ajoelhada com lupa na mão investigando um diamante">
+        <div id="apresentacao__saida__nenhumaMensagemEncontrada__conteudo" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo">
+            <p id="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo">Nenhuma mensagem encontrada</p>
+            <p id="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
         </div>
       </section>
-      <section class="apresentacao__saida__Criptografado" >
-        <p class="apresentacao__saida__Criptografado__conteudo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
-        <button class="apresentacao__saida__Criptografado__botaoCopiar" value="Copiar">Copiar</button>
+      <section class="apresentacao__saida__criptografado" hidden="true">
+        <p id="apresentacao__saida__Criptografado__conteudo" class="apresentacao__saida__Criptografado__conteudo" hidden="true"></p>
+        <button class="apresentacao__saida__criptografado__botaoCopiar" value="Copiar" hidden="true">Copiar</button>
       </section>
     </section>
   </main>   
@@ -57,6 +57,6 @@
   <footer class="rodape">
     <p class="rodape__conteudo">&copy; 2024 Washington Kiyoshi Yoshimatsu</p>
   </footer>
-  <script src="/assets/js/script.js"></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>

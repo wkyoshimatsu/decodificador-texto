@@ -20,6 +20,7 @@
 }
 
 body {
+    width: 100vw;
     height: 100vh;
     box-sizing: border-box;
     background-color: #F3F5FC;
@@ -253,7 +254,7 @@ body {
 }
 
 /* saidaCriptografada */
-.apresentacao__saida__Criptografado {
+.apresentacao__saida__criptografado {
     width: 336px;
     background-color: #FFFFFF;
     display: flex;
@@ -263,7 +264,7 @@ body {
     gap: 32px;
 }
 
-.apresentacao__saida__Criptografado__conteudo {
+.apresentacao__saida__criptografado__conteudo {
     height: 781px;
     font-family: "Inter", sans-serif;
     font-size: 1.5rem;
@@ -271,7 +272,7 @@ body {
     font-weight: 400;
 }
 
-.apresentacao__saida__Criptografado__botaoCopiar {
+.apresentacao__saida__criptografado__botaoCopiar {
     width: 336px;
     padding: 24px;
     border: 1px solid;
