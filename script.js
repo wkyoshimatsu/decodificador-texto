@@ -4,8 +4,10 @@ function exibirMensagemInicial(){
 }
 
 function criptografar () {
-  let textoBase = document.querySelector("textarea").value;
-  let textoEmProcessamento = textoBase.replaceAll("e", "enter");
+  let textoParaCriptografia = document.getElementById("entrada").value;
+  document.getElementById("entrada").value = "";
+  
+  let textoEmProcessamento = textoParaCriptografia.replaceAll("e", "enter");
   textoEmProcessamento = textoEmProcessamento.replaceAll("i", "imes");
   textoEmProcessamento = textoEmProcessamento.replaceAll("a", "ai");
   textoEmProcessamento = textoEmProcessamento.replaceAll("o", "ober");
@@ -19,8 +21,8 @@ function criptografar () {
 }
 
 function descriptografar () {
-  let textoBase = document.querySelector("textarea").value;
-  let textoEmProcessamento = textoBase.replaceAll("enter", "e");
+  let textoParaDescriptografar = document.getElementById("entrada").value;
+  let textoEmProcessamento = textoParaDescriptografar.replaceAll("enter", "e");
   textoEmProcessamento = textoEmProcessamento.replaceAll("imes", "i");
   textoEmProcessamento = textoEmProcessamento.replaceAll("ai", "a");
   textoEmProcessamento = textoEmProcessamento.replaceAll("ober", "o");
@@ -34,10 +36,10 @@ function descriptografar () {
 }
 
 function copiar() {
-  let textoBase = document.getElementById("resultado__conteudo").value;
+  let textoParaCopiar = document.getElementById("resultado__conteudo").innerHTML;
+  
   let campo = document.getElementById("entrada");
-  campo.innerHTML = textoBase;
-  console.log(campo.innerHTML);
+  campo.value = textoParaCopiar;
 }
 
 exibirMensagemInicial();
