@@ -20,9 +20,6 @@ let padrao_caracteres = /[^a-z]/gm;
 function exibirMensagemInicial(){
   document.getElementById("nenhumaMensagemEncontrada").style.display = "flex";
   document.getElementById("resultado").style.display = "none";
-
-  console.log(chave_criptografia);
-  console.log(chave_descriptografia);
 }
 
 function criptografar (tipo) {
@@ -34,7 +31,7 @@ function criptografar (tipo) {
     exibirMensagemInicial();
     alert("Apenas letras minúsculas e sem acento.");
   } else {
-    let textoEmProcessamento = document.getElementById("entrada").value;
+    let textoEmProcessamento = entrada;
   
     let chave;
     if (tipo == 1){
@@ -50,15 +47,14 @@ function criptografar (tipo) {
     document.getElementById("nenhumaMensagemEncontrada").style.display = "none";
     document.getElementById("resultado").style.display = "flex";
   
-    let campo = document.getElementById("resultado__conteudo");
-    campo.innerHTML = textoEmProcessamento;
+    let resultado = document.getElementById("resultado__conteudo");
+    resultado.innerHTML = entrada;
   }
   document.getElementById("entrada").value = "";
 }
 
 function copiar() {
   let textoParaCopiar = document.getElementById("resultado__conteudo").innerHTML;
-  
   let campo = document.getElementById("entrada");
   campo.value = textoParaCopiar;
 }
