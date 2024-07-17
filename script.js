@@ -1,3 +1,8 @@
+function exibirMensagemInicial(){
+  document.getElementById("nenhumaMensagemEncontrada").style.display = "flex";
+  document.getElementById("resultado").style.display = "none";
+}
+
 function criptografar () {
   let textoBase = document.querySelector("textarea").value;
   let textoEmProcessamento = textoBase.replaceAll("e", "enter");
@@ -6,20 +11,35 @@ function criptografar () {
   textoEmProcessamento = textoEmProcessamento.replaceAll("o", "ober");
   let textoCriptografado = textoEmProcessamento.replaceAll("u", "ufat");
 
-  console.log(textoCriptografado);
+  document.getElementById("nenhumaMensagemEncontrada").style.display = "none";
+  document.getElementById("resultado").style.display = "flex";
 
-  document.getElementById("apresentacao__saida__nenhumaMensagemEncontrada").setAttribute("hidden", true);
-  document.getElementById("apresentacao__saida__nenhumaMensagemEncontrada__imagem").setAttribute("hidden", true);
-  document.getElementById("apresentacao__saida__nenhumaMensagemEncontrada__conteudo").setAttribute("hidden", true);
-  document.getElementById("apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo").setAttribute("hidden", true);
-  document.getElementById("apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao").setAttribute("hidden", true);
-
-
-  //document.getElementsById("apresentacao__saida__criptografado").setAttribute("hidden", false);
-  
-  // let campo = document.getElementById("apresentacao__saida__Criptografado__conteudo");
-  // campo.innerHTML = textoCriptografado;
-
+  let campo = document.getElementById("resultado__conteudo");
+  campo.innerHTML = textoCriptografado;
 }
+
+function descriptografar () {
+  let textoBase = document.querySelector("textarea").value;
+  let textoEmProcessamento = textoBase.replaceAll("enter", "e");
+  textoEmProcessamento = textoEmProcessamento.replaceAll("imes", "i");
+  textoEmProcessamento = textoEmProcessamento.replaceAll("ai", "a");
+  textoEmProcessamento = textoEmProcessamento.replaceAll("ober", "o");
+  let textoDescriptografado = textoEmProcessamento.replaceAll("ufat", "u");
+
+  document.getElementById("nenhumaMensagemEncontrada").style.display = "none";
+  document.getElementById("resultado").style.display = "flex";
+
+  let campo = document.getElementById("resultado__conteudo");
+  campo.innerHTML = textoDescriptografado;
+}
+
+function copiar() {
+  let textoBase = document.getElementById("resultado__conteudo").value;
+  let campo = document.getElementById("entrada");
+  campo.innerHTML = textoBase;
+  console.log(campo.innerHTML);
+}
+
+exibirMensagemInicial();
   
   

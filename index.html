@@ -28,28 +28,28 @@
         </div>
       </nav>
     </header>
-    <form id="entrada" class="apresentacao__entrada" action="">
-      <textarea id="entrada" class="apresentacao__entrada__campo" rows="13" cols="40" placeholder="Digite seu texto" required></textarea>
+    <section class="apresentacao__entrada">
+      <textarea id="entrada" class="apresentacao__entrada__campo" rows="13" cols="40" placeholder="Digite seu texto" ></textarea>
       <div class="apresentacao__entrada__observacao">
         <p class="apresentacao__entrada__observacao__iconeAtencao">!</p>
         <p class="apresentacao__entrada__observacao__texto">Apenas letras minúsculas e sem acento.</p>
       </div>
       <div class="apresentacao__entrada__botoes">
         <button onclick="criptografar()" class="apresentacao__entrada__botoes__criptografar" value="Criptografar">Criptografar</button>
-        <button class="apresentacao__entrada__botoes__descriptografar"  value="Descriptografar">Descriptografar</button>
+        <button onclick="descriptografar()" class="apresentacao__entrada__botoes__descriptografar"  value="Descriptografar">Descriptografar</button>
       </div>
-    </form>
+    </section>
     <section class="apresentacao__saida">
-      <section id="apresentacao__saida__nenhumaMensagemEncontrada" class="apresentacao__saida__nenhumaMensagemEncontrada">
-        <img id="apresentacao__saida__nenhumaMensagemEncontrada__imagem" class="apresentacao__saida__nenhumaMensagemEncontrada__imagem" src="/assets/images/nenhumaMensagemEncontrada.jpg" alt="Pessoa ajoelhada com lupa na mão investigando um diamante">
-        <div id="apresentacao__saida__nenhumaMensagemEncontrada__conteudo" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo">
-            <p id="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo">Nenhuma mensagem encontrada</p>
-            <p id="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <section id="nenhumaMensagemEncontrada" class="apresentacao__saida__nenhumaMensagemEncontrada">
+        <img id="nenhumaMensagemEncontrada__imagem" class="apresentacao__saida__nenhumaMensagemEncontrada__imagem" src="/assets/images/nenhumaMensagemEncontrada.jpg" alt="Pessoa ajoelhada com lupa na mão investigando um diamante">
+        <div id="nenhumaMensagemEncontrada__conteudo" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo">
+            <p id="nenhumaMensagemEncontrada__conteudo__titulo" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo">Nenhuma mensagem encontrada</p>
+            <p id="nenhumaMensagemEncontrada__conteudo__descricao" class="apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao">Digite um texto que você deseja criptografar ou descriptografar.</p>
         </div>
       </section>
-      <section class="apresentacao__saida__criptografado" hidden="true">
-        <p id="apresentacao__saida__Criptografado__conteudo" class="apresentacao__saida__Criptografado__conteudo" hidden="true"></p>
-        <button class="apresentacao__saida__criptografado__botaoCopiar" value="Copiar" hidden="true">Copiar</button>
+      <section id="resultado" class="apresentacao__saida__resultado">
+        <p id="resultado__conteudo" class="apresentacao__saida__resultado__conteudo"></p>
+        <button onclick="copiar()" id="copiar" class="apresentacao__saida__resultado__botaoCopiar" value="Copiar">Copiar</button>
       </section>
     </section>
   </main>   
