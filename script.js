@@ -15,11 +15,26 @@ for (let i in chave_criptografia){
   chave_descriptografia.push(j);
 }
 
-let padrao_caracteres = /[^a-z]/gm;
+let padrao_caracteres = /[^a-z|^\s|^\n|^..|^.,]/gm;
 
 function exibirMensagemInicial(){
   document.getElementById("nenhumaMensagemEncontrada").style.display = "flex";
   document.getElementById("resultado").style.display = "none";
+  alterarAlturaTela();
+}
+
+function alterarAlturaTela(){
+  let apresentacao = document.querySelector("body");
+  let alturaApresentacao = apresentacao.offsetHeight;
+  let alturaTela = document.documentElement.clientHeight;
+  console.log(alturaApresentacao);
+  console.log(alturaTela);
+  
+  if (alturaApresentacao < alturaTela){
+    apresentacao.style.height = (alturaTela + "px");
+  } else {
+    apresentacao.style.removeProperty("height");
+  }
 }
 
 function criptografar (tipo) {
@@ -44,19 +59,28 @@ function criptografar (tipo) {
       textoEmProcessamento = textoEmProcessamento.replaceAll(chave[i].chave, chave[i].valor)
     }
     
+    // TODO: quebrar texto quando a largura é pequena
+    // console.log(textoEmProcessamento.length);
+    // console.log(textoEmProcessamento.indexOf(" "));
+    // console.log(textoEmProcessamento.indexOf("\n"));
+    // console.log(textoEmProcessamento.indexOf(","));
+    // console.log(textoEmProcessamento.indexOf("."));
+
     document.getElementById("nenhumaMensagemEncontrada").style.display = "none";
     document.getElementById("resultado").style.display = "flex";
-  
+    
     let resultado = document.getElementById("resultado__conteudo");
     resultado.innerHTML = textoEmProcessamento;
   }
   document.getElementById("entrada").value = "";
+  alterarAlturaTela();
 }
 
 function copiar() {
   let textoParaCopiar = document.getElementById("resultado__conteudo").innerHTML;
   let campo = document.getElementById("entrada");
   campo.value = textoParaCopiar;
+  alterarAlturaTela();
 }
 
 exibirMensagemInicial();
