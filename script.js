@@ -33,7 +33,7 @@ function criptografar (tipo) {
   } else {
     let textoEmProcessamento = entrada;
   
-    let chave;
+    let chave = chave_criptografia;
     if (tipo == 1){
       chave = chave_criptografia;
     } else {
@@ -48,7 +48,7 @@ function criptografar (tipo) {
     document.getElementById("resultado").style.display = "flex";
   
     let resultado = document.getElementById("resultado__conteudo");
-    resultado.innerHTML = entrada;
+    resultado.innerHTML = textoEmProcessamento;
   }
   document.getElementById("entrada").value = "";
 }
