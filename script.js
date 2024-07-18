@@ -35,7 +35,14 @@ function alterarAlturaTela(){
   } else {
     apresentacao.style.removeProperty("height");
   }
+
+  if (alturaTela < 1000){
+    document.getElementById("entrada").setAttribute("rows", "5");
+  } else {
+    document.getElementById("entrada").setAttribute("rows", "16");
+  }
 }
+
 
 function criptografar (tipo) {
   let entrada = document.getElementById("entrada").value;
