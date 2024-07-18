@@ -9,7 +9,8 @@
     --cor-azul-claro:#F3F5FC;
     --cor-azul-escuro:#0A3871;
     --cor-cinza-claro: #DBDDE3;
-    --cor-cinza-escuro: #495057;
+    --cor-cinza-medio: #495057;
+    --cor-cinza-escuro: #343A40;
     --cor-branco: #FFFFFF;
 
     --backgroud-color-primaria: var(--cor-azul-claro);
@@ -40,11 +41,13 @@
 
     /* apresentacao */
     .apresentacao {
+        height: 92%;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding: 4%;
+        gap: 1rem;
     }
 
     /* cabeçalho */
@@ -109,7 +112,6 @@
 
     .apresentacao__entrada__campo {
         background-color: var(--cor-azul-claro);
-        resize: none;
         border: 0px;
         font-size: 2rem;
         color: var(--cor-azul-escuro);
@@ -136,7 +138,7 @@
 
     .apresentacao__entrada__observacao__texto {
         font-size: 0.75rem;
-        color: var(--cor-cinza-escuro);
+        color: var(--cor-cinza-medio);
         font-weight: 400;
         vertical-align: middle;
     }
@@ -146,36 +148,127 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 24px;
+        gap: 1.5rem;
     }
 
     .apresentacao__entrada__botoes__criptografar {
         width: 100%;
         background-color:var(--cor-azul-escuro);
-        
+        padding: 1.5rem;
+        border: 1px solid var(--cor-azul-escuro);
+        border-radius: 24px;
         font-size: 1rem;
         color: var(--cor-branco);
         font-weight: 400;
-        border: 1px solid;
-        
-        border-radius: 24px;
-
-        
-        padding: 1.5rem;
         text-align: center;
     }
 
     .apresentacao__entrada__botoes__descriptografar {
         width: 100%;
-        
+        background-color: var(--cor-cinza-claro);
         padding: 1.5rem;
-        
+        border: 1px solid var(--cor-azul-escuro);
+        border-radius: 24px;
         font-size: 1rem;
         color: var(--cor-azul-escuro);
         font-weight: 400;
+        text-align: center;
+    }
+
+    /* saida */
+    .apresentacao__saida {
+        width: 100%;
+        background-color: var(--cor-branco);
+        padding: 6%;
+        border-radius: 32px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* nenhumaMensagemEncontrada */
+    .apresentacao__saida__nenhumaMensagemEncontrada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .apresentacao__saida__nenhumaMensagemEncontrada__imagem {
+        display: none;
+    }
+
+    .apresentacao__saida__nenhumaMensagemEncontrada__conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .apresentacao__saida__nenhumaMensagemEncontrada__conteudo__titulo {
+        font-size: 1.5rem;
+        color: var(--cor-cinza-escuro);
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .apresentacao__saida__nenhumaMensagemEncontrada__conteudo__descricao {
+        font-size: 1rem;
+        color: var(--cor-cinza-medio);
+        font-weight: 400;
+        text-align: center;
+    }
+
+    /* resultado */
+    .apresentacao__saida__resultado {
+        width: 100%;
+        background-color: var(--cor-branco);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .apresentacao__saida__resultado__conteudo {
+        box-sizing: border-box;
+        width: 100%;
+        font-size: 1.5rem;
+        color: var(--cor-cinza-medio);
+        font-weight: 400;
+        text-align: left;
+        white-space: normal;
+    }
+
+    .apresentacao__saida__resultado__botaoCopiar {
+        width: 100%;
+        background-color: var(--cor-branco);
         border: 1px solid var(--cor-azul-escuro);
-        background-color: var(--cor-cinza-claro);
         border-radius: 24px;
+        padding: 1.5rem;
+        font-size: 1rem;
+        color: var(--cor-azul-escuro);
+        font-weight: 400;
+        text-align: center;
+    }
+
+
+    /* rodape */
+    .rodape {
+        height: 8%;
+        background-color: var(--cor-azul-escuro);
+    }
+
+    .rodape__conteudo {
+        background-color:var(--cor-azul-escuro);
+        padding: 1rem;
+        font-size: 1rem;
+        color: var(--cor-branco);
+        font-weight: 400;
         text-align: center;
     }
 }
