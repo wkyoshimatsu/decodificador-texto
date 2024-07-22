@@ -17,10 +17,11 @@ for (let i in chave_criptografia){
 
 let padrao_caracteres = /[^a-z|^\s|^\n|^..|^.,]/gm;
 
-function exibirMensagemInicial(){
-  document.getElementById("nenhumaMensagemEncontrada").style.display = "flex";
-  document.getElementById("resultado").style.display = "none";
-  alterarAlturaTela();
+
+
+function setAlturaCampo (tamanho) {
+  let elementoEntrada = document.getElementById("entrada");
+  elementoEntrada.setAttribute("rows",tamanho);
 }
 
 function alterarAlturaTela(){
@@ -36,13 +37,47 @@ function alterarAlturaTela(){
     apresentacao.style.removeProperty("height");
   }
 
-  if (alturaTela < 1000){
-    document.getElementById("entrada").setAttribute("rows", "5");
-  } else {
-    document.getElementById("entrada").setAttribute("rows", "16");
+  let larguraTela = document.documentElement.clientWidth;
+  if (alturaTela > larguraTela) { /* modo retrato */
+    if (larguraTela < 700) { /* celulares */
+      if (alturaTela < 700) {
+        setAlturaCampo("3");
+      } else if (alturaTela < 725){
+        setAlturaCampo("4");
+      } else if (alturaTela < 800){
+        setAlturaCampo("5");
+      } else if (alturaTela < 850){
+        setAlturaCampo("7");
+      } else if (alturaTela < 900){
+        setAlturaCampo("8");
+      } else if (alturaTela < 950){
+        setAlturaCampo("9");
+      } else {
+        setAlturaCampo("9");
+      }
+    } else { /* tablets */
+      if (alturaTela < 1100) {
+        setAlturaCampo("8");
+      } else if (alturaTela < 1200){
+        setAlturaCampo("11");
+      } else if (alturaTela < 1300) {
+        setAlturaCampo("13");
+      } else {
+        setAlturaCampo("14");
+      }
+    }
+    
   }
+
+  
+
 }
 
+function exibirMensagemInicial(){
+  document.getElementById("nenhumaMensagemEncontrada").style.display = "flex";
+  document.getElementById("resultado").style.display = "none";
+  alterarAlturaTela();
+}
 
 function criptografar (tipo) {
   let entrada = document.getElementById("entrada").value;
