@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Decodificador de texto</title>
   <link rel="stylesheet" href="https://wkyoshimatsu.github.io/decodificador-texto/style.css">
+  <!-- <link rel="stylesheet" href="\style.css"> -->
 </head>
 <body>
   <main class="apresentacao">
@@ -13,7 +14,7 @@
       <nav class="apresentacao__cabecalho__menu">
         <img class="apresentacao__cabecalho__menu__logo" src="/assets/images/logo.png" alt="Logo da Alura">
       </nav>
-      <section class="apresentacao__cabecalho__acessibilidade">
+      <section class="apresentacao__cabecalho__acessibilidade" >
         <div class="apresentacao__cabecalho__acessibilidade__opcao">
           <div class="apresentacao__cabecalho__acessibilidade__opcao__seletor">
             <button class="apresentacao__cabecalho__acessibilidade__opcao__seletor__ativo" value="TT">TT</button>
@@ -29,10 +30,12 @@
       </section>
     </header>
     <section class="apresentacao__entrada">
-      <textarea id="entrada" class="apresentacao__entrada__campo"  rows="3" placeholder="Digite seu texto"></textarea>
-      <div class="apresentacao__entrada__observacao">
-        <p class="apresentacao__entrada__observacao__iconeAtencao">!</p>
-        <p class="apresentacao__entrada__observacao__texto">Apenas letras minúsculas e sem acento.</p>
+      <div class="apresentacao__entrada__texto">
+        <textarea id="entrada" class="apresentacao__entrada__texto__campo"  rows="3" placeholder="Digite seu texto"></textarea>
+        <div class="apresentacao__entrada__texto__observacao">
+          <p class="apresentacao__entrada__texto__observacao__iconeAtencao">!</p>
+          <p class="apresentacao__entrada__texto__observacao__conteudo">Apenas letras minúsculas e sem acento.</p>
+        </div>
       </div>
       <div class="apresentacao__entrada__botoes">
         <button onclick="criptografar(1)" class="apresentacao__entrada__botoes__criptografar" value="Criptografar">Criptografar</button>
@@ -58,5 +61,6 @@
     <p class="rodape__conteudo">&copy; 2024 Washington Kiyoshi Yoshimatsu</p>
   </footer>
   <script type="text/javascript" src="https://wkyoshimatsu.github.io/decodificador-texto/script.js" defer></script>
+  <!-- <script type="text/javascript" src="\script.js" defer></script> -->
 </body>
 </html>

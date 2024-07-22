@@ -17,8 +17,6 @@ for (let i in chave_criptografia){
 
 let padrao_caracteres = /[^a-z|^\s|^\n|^..|^.,]/gm;
 
-
-
 function setAlturaCampo (tamanho) {
   let elementoEntrada = document.getElementById("entrada");
   elementoEntrada.setAttribute("rows",tamanho);
@@ -66,11 +64,7 @@ function alterarAlturaTela(){
         setAlturaCampo("14");
       }
     }
-    
   }
-
-  
-
 }
 
 function exibirMensagemInicial(){
@@ -102,11 +96,6 @@ function criptografar (tipo) {
     }
     
     // TODO: quebrar texto quando a largura é pequena
-    // console.log(textoEmProcessamento.length);
-    // console.log(textoEmProcessamento.indexOf(" "));
-    // console.log(textoEmProcessamento.indexOf("\n"));
-    // console.log(textoEmProcessamento.indexOf(","));
-    // console.log(textoEmProcessamento.indexOf("."));
 
     document.getElementById("nenhumaMensagemEncontrada").style.display = "none";
     document.getElementById("resultado").style.display = "flex";
