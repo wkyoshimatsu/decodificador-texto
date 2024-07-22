@@ -17,17 +17,33 @@ for (let i in chave_criptografia){
 
 let padrao_caracteres = /[^a-z|^\s|^\n|^..|^.,]/gm;
 
-function setAlturaCampo (tamanho) {
+function convertRemToPixels(rem) {    
+  return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+}
+
+function alterarAlturaCampo () {
+  let entrada = document.getElementById("apresentacao__entrada__texto");
+  let alturaCampo = entrada.offsetHeight - (convertRemToPixels(4));
+  let numeroLinhas = Math.floor(alturaCampo / convertRemToPixels(2)) - 1;
+
+  if (numeroLinhas < 3){
+    numeroLinhas = 3;
+  }
+
+  console.log(numeroLinhas);
+
+  let linhas = numeroLinhas.toString();
+
+  console.log(linhas);
+
   let elementoEntrada = document.getElementById("entrada");
-  elementoEntrada.setAttribute("rows",tamanho);
+  elementoEntrada.setAttribute("rows", linhas);
 }
 
 function alterarAlturaTela(){
   let apresentacao = document.querySelector("body");
   let alturaApresentacao = apresentacao.offsetHeight;
   let alturaTela = document.documentElement.clientHeight;
-  console.log(alturaApresentacao);
-  console.log(alturaTela);
   
   if (alturaApresentacao < alturaTela){
     apresentacao.style.height = (alturaTela + "px");
@@ -35,36 +51,41 @@ function alterarAlturaTela(){
     apresentacao.style.removeProperty("height");
   }
 
-  let larguraTela = document.documentElement.clientWidth;
-  if (alturaTela > larguraTela) { /* modo retrato */
-    if (larguraTela < 700) { /* celulares */
-      if (alturaTela < 700) {
-        setAlturaCampo("3");
-      } else if (alturaTela < 725){
-        setAlturaCampo("4");
-      } else if (alturaTela < 800){
-        setAlturaCampo("5");
-      } else if (alturaTela < 850){
-        setAlturaCampo("7");
-      } else if (alturaTela < 900){
-        setAlturaCampo("8");
-      } else if (alturaTela < 950){
-        setAlturaCampo("9");
-      } else {
-        setAlturaCampo("9");
-      }
-    } else { /* tablets */
-      if (alturaTela < 1100) {
-        setAlturaCampo("8");
-      } else if (alturaTela < 1200){
-        setAlturaCampo("11");
-      } else if (alturaTela < 1300) {
-        setAlturaCampo("13");
-      } else {
-        setAlturaCampo("14");
-      }
-    }
-  }
+  // let larguraTela = document.documentElement.clientWidth;
+  // if (alturaTela > larguraTela) { /* modo retrato */
+  //   if (larguraTela < 700) { /* celulares */
+  //     if (alturaTela < 700) {
+  //       setAlturaCampo("3");
+  //     } else if (alturaTela < 725){
+  //       setAlturaCampo("4");
+  //     } else if (alturaTela < 800){
+  //       setAlturaCampo("5");
+  //     } else if (alturaTela < 850){
+  //       setAlturaCampo("7");
+  //     } else if (alturaTela < 900){
+  //       setAlturaCampo("8");
+  //     } else if (alturaTela < 950){
+  //       setAlturaCampo("9");
+  //     } else {
+  //       setAlturaCampo("9");
+  //     }
+  //   } else { /* tablets */
+  //     if (alturaTela < 1100) {
+  //       setAlturaCampo("8");
+  //     } else if (alturaTela < 1200){
+  //       setAlturaCampo("11");
+  //     } else if (alturaTela < 1300) {
+  //       setAlturaCampo("13");
+  //     } else {
+  //       setAlturaCampo("14");
+  //     }
+  //   }
+  // } else {
+  //   if (larguraTela > 1025) {
+  //     setAlturaCampo("2");
+  //   }
+  // }
+  alterarAlturaCampo();
 }
 
 function exibirMensagemInicial(){
@@ -107,8 +128,19 @@ function criptografar (tipo) {
   alterarAlturaTela();
 }
 
+async function writeClipboardText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
 function copiar() {
   let textoParaCopiar = document.getElementById("resultado__conteudo").innerHTML;
+  
+  writeClipboardText(textoParaCopiar);
+
   let campo = document.getElementById("entrada");
   campo.value = textoParaCopiar;
   alterarAlturaTela();
