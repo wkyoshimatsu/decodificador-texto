@@ -1,17 +1,16 @@
-﻿<h1 align="center"> Decodificador de texto </h1>
+﻿<h1 align="center">Decodificador de texto</h1>
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=&message=html&color=gray&style=for-the-badge&logo=HTML5"/>
   <img src="https://img.shields.io/static/v1?label=&message=css&color=gray&style=for-the-badge&logo=CSS3"/>
   <img src="https://img.shields.io/static/v1?label=&message=javascript&color=gray&style=for-the-badge&logo=JAVASCRIPT"/>
   <img src="https://img.shields.io/static/v1?label=GitHub pages&message=deploy&color=blue&style=for-the-badge&logo=githubpages"/>
-  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
   <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=red&style=for-the-badge"/>
 </p>
 
 ## :mag: Índice 
 
-:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
+:small_blue_diamond: [Descrição do projeto](#pushpin-descrição-do-projeto)
 
 :small_blue_diamond: [Funcionalidades](#hammer-funcionalidades)
 
@@ -27,11 +26,9 @@
 
 :small_blue_diamond: [Desenvolvedores e Contribuintes](#octocat-desenvolvedores-e-contribuintes)
 
-:small_blue_diamond: [Tarefas em aberto](#tarefas-em-aberto)
+:small_blue_diamond: [Tarefas em aberto](#memo-tarefas-em-aberto)
 
-:small_blue_diamond: [Licença](#licença)
-
-## Descrição do projeto
+## :pushpin: Descrição do projeto
 
 <p align="justify">
   O projeto "Decodificador de texto" tem o objetivo de criptografar e/ou descriptografar um texto mostrando o resultado na tela. 
@@ -58,9 +55,27 @@ Acesse o [código fonte do projeto](https://github.com/wkyoshimatsu/decodificado
 
 ## :heavy_check_mark: Tecnologias utilizadas 
 
-- [HTML](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
-- [CSS](https://react-pdf.org/)
-- [Javascript](https://react-pdf.org/)
+- `HTML`:
+  
+  > O HTML fornece os elementos necessários da aplicação como:
+  > - `<textarea>`: campo para inserção do texto a ser criptografado/descriptografado;
+  > - `<button onclick="function()>`: botão que ao clicar executa funções no Javascript;
+  >   
+  > permitindo que JavaScript execute as funções necessárias.
+  > 
+  > O HTML foi desenvolvido baseado Figma disponibilizado e requisitos do projeto;
+
+- `CSS`:
+  
+  > O CSS fornece estilização aos elementos do HTML permitindo a responsividade em diferentes dispositivos.
+  > 
+  > O CSS foi desenvolvido baseado Figma disponibilizado e requisitos do projeto
+  
+- `Javascript`:
+  
+  > O JavaScript permite a execução das funções criptografar, descriptografar e copiar.
+  > 
+  > Foi tomado o cuidado de fazer um código inteligente, sem repetição e que cuida também os de aspectos visuais com CSS dinâmico.
 
 ## :books: Pré-requisitos 
 
@@ -87,12 +102,14 @@ Para executar:
 start index.html
 ```
 
-* no Linux (:exclamation: a verificar)
+* no Linux ( :exclamation: a verificar)
+
 ```
 xdg-open index.html
 ```
 
-* no iOS (:exclamation: a verificar)
+* no iOS ( :exclamation: a verificar)
+  
 ```
 open index.html
 ```
@@ -102,16 +119,13 @@ open index.html
 | [<img src="https://avatars2.githubusercontent.com/u/101765683?v=4" width=115><br><sub>Washington Yoshimatsu</sub>](https://github.com/wkyoshimatsu) | 
 | :---: |
 
-## Tarefas em aberto
+## :memo: Tarefas em aberto
 
-:memo: Adicionar acessibilidade (reproduzir texto com sons);
+:small_blue_diamond: Adicionar acessibilidade (reproduzir texto com sons);
 
-:memo: Adicionar opção para mudar o idiomna;
+:small_blue_diamond: Adicionar opção para mudar o idiomna;
 
-:memo: Melhorar a apresentação do resultado (quebrar palavra ou diminuir fonte quando existir palavra maior que a largura de apresentação)
+:small_blue_diamond: Melhorar a apresentação do resultado (quebrar palavra ou diminuir fonte quando existir palavra maior que a largura de apresentação)
 
-## Licença 
-
-The [MIT License]() (MIT)
-
+---
 Copyright :copyright: 2024 - Decodificador de texto
