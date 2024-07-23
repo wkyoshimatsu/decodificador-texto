@@ -25,17 +25,12 @@ function alterarAlturaCampo () {
   let entrada = document.getElementById("apresentacao__entrada__texto");
   let alturaCampo = entrada.offsetHeight - (convertRemToPixels(4));
   let numeroLinhas = Math.floor(alturaCampo / convertRemToPixels(2)) - 1;
-
+  
   if (numeroLinhas < 3){
     numeroLinhas = 3;
   }
-
-  console.log(numeroLinhas);
-
+  
   let linhas = numeroLinhas.toString();
-
-  console.log(linhas);
-
   let elementoEntrada = document.getElementById("entrada");
   elementoEntrada.setAttribute("rows", linhas);
 }
@@ -50,41 +45,6 @@ function alterarAlturaTela(){
   } else {
     apresentacao.style.removeProperty("height");
   }
-
-  // let larguraTela = document.documentElement.clientWidth;
-  // if (alturaTela > larguraTela) { /* modo retrato */
-  //   if (larguraTela < 700) { /* celulares */
-  //     if (alturaTela < 700) {
-  //       setAlturaCampo("3");
-  //     } else if (alturaTela < 725){
-  //       setAlturaCampo("4");
-  //     } else if (alturaTela < 800){
-  //       setAlturaCampo("5");
-  //     } else if (alturaTela < 850){
-  //       setAlturaCampo("7");
-  //     } else if (alturaTela < 900){
-  //       setAlturaCampo("8");
-  //     } else if (alturaTela < 950){
-  //       setAlturaCampo("9");
-  //     } else {
-  //       setAlturaCampo("9");
-  //     }
-  //   } else { /* tablets */
-  //     if (alturaTela < 1100) {
-  //       setAlturaCampo("8");
-  //     } else if (alturaTela < 1200){
-  //       setAlturaCampo("11");
-  //     } else if (alturaTela < 1300) {
-  //       setAlturaCampo("13");
-  //     } else {
-  //       setAlturaCampo("14");
-  //     }
-  //   }
-  // } else {
-  //   if (larguraTela > 1025) {
-  //     setAlturaCampo("2");
-  //   }
-  // }
   alterarAlturaCampo();
 }
 
